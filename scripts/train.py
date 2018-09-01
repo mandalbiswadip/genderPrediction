@@ -58,6 +58,7 @@ class RNN:
         self.query_list = self.dataset[self.name_column]
 
     def input_single_data(self, word):
+        word = word.lower()
         vec = []
         for i in range(paths.max_sentence_length):
             vec.append(self.char_embedding(word, i))
@@ -292,6 +293,7 @@ def train():
     trainer.train_RNN()
 
 def classify(word):
+    word = word.lower()
     trainer = RNN()
     trainer.input_single_data(word)
     trainer.build_RNN_variables(num_hidden=20)
@@ -299,4 +301,4 @@ def classify(word):
     trainer.rerun_session()
 
 if __name__=='__main__':
-    classify('dude')
+    classify('Pabitra')
