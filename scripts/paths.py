@@ -1,9 +1,10 @@
+#include directory paths for the project 
 from collections import defaultdict
 
 def getvalue():
     return 26
 
-HOME = "/home/biswadip/Documents/repos/gender_names"
+HOME = "gender_names"
 data_path = HOME + '/data'
 model_path = HOME + '/model'
 
