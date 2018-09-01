@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/biswadip/Documents/repos/gender_names/model/model.clpt-500"
+all_model_checkpoint_paths: "/home/biswadip/Documents/repos/gender_names/model/model.clpt-500"
