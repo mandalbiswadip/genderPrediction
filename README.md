@@ -4,6 +4,7 @@ Given a name of person, the trained model tries to predict the gender of the per
 
 
 The data has been collectted from the following sites: 
+
 parenting.firstcry.com
 www.indianmirror.com
 
