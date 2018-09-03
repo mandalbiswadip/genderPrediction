@@ -1,3 +1,5 @@
+Probablity of being the gender 'male' or 'female' for a particular name.
+
 name: 'biswadip'
 {'male': 0.9898892, 'female': 0.01011086}
 
