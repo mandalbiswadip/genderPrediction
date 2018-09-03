@@ -1,6 +1,6 @@
 # gender_prediction
 Gender prediction from Indian names.
-The trained model tries to predict the gender of the person. The model has been trained only with Indian names for now.
+The trained model tries to predict the gender of the person given the name of the person. The model has been trained only with Indian names for now.
 
 
 The data has been collectted from the following sites: 
