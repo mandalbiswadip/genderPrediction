@@ -1,4 +1,4 @@
-Probablity of being the gender 'male' or 'female' for a particular name predicted by the model.
+For a given name, probablity of being the gender 'male' or 'female' predicted by the model.
 
 name: 'biswadip'
 {'male': 0.9898892, 'female': 0.01011086}
