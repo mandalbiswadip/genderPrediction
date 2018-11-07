@@ -6,6 +6,7 @@ The trained model tries to predict the gender of the person given the name of th
 The data has been collectted from the following sites: 
 
 parenting.firstcry.com
+
 www.indianmirror.com
 
 Model description:
