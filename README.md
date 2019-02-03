@@ -2,13 +2,6 @@
 Gender prediction from Indian names.
 The trained model tries to predict the gender of the person given the name of the person. The model has been trained only with Indian names for now.
 
-
-The data has been collectted from the following sites: 
-
-www.parenting.firstcry.com
-
-www.indianmirror.com
-
 Model description:
 Charecter level embedding(One hot embeddding) has been used and has been fed to a sequential Recurrent Neural Network(bidirectional).
 Currently the model is tranied for names with maximum 20 charecters.
