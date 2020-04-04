@@ -11,8 +11,18 @@ I am currently trying to train the model for more than 20 charecters. Also, it w
 Few of the predicted results are included in the results file. Other analysis will be uploaded as soon as they are done. 
 
 
-Libraries used:
-1. TensorFlow
-2. Pandas
-3. Numpy
-4. Sklearn
+Sample Results:
+
+For a given name, probablity of being the gender 'male' or 'female' predicted by the model.
+
+name: 'biswadip'
+{'male': 0.9898892, 'female': 0.01011086}
+
+name: 'Aadarsh'
+{'male': 0.9724812, 'female': 0.02751883}
+
+name: 'Maadhav'
+{'male': 0.97186756, 'female': 0.02813238}
+
+name: 'Pabitra'
+{'male': 0.270486, 'female': 0.729514}
