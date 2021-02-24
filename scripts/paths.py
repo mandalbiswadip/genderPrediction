@@ -1,6 +1,6 @@
 #include directory paths for the project
 
-HOME = "/home/biswadip/biswadip_temp/repos/open_source/genderPrediction"
+HOME = ""
 data_path = HOME + '/data'
 model_path = HOME + '/model'
 
