@@ -66,3 +66,8 @@ name: 'Pabitra'
 'male': 0.270486, 
 'female': 0.729514
 }`
+
+
+### Future work:
+* Migrate to tensorflow 2.0
+* remove the limit on maximum characters 
