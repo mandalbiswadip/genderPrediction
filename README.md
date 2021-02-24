@@ -9,6 +9,7 @@ You need python3.6 and tensorflow 1.8 for running the model.
 clone the repo:
 
 `git clone https://github.com/mandalbiswadip/genderPrediction.git`
+
 `cd genderPrediction`
 
 Create a virtual environment if you like to work in one and install the requirements:
@@ -38,13 +39,30 @@ Sample Results:
 For a given name, probability of being the gender 'male' or 'female' predicted by the model.
 
 name: 'biswadip'
-{'male': 0.9898892, 'female': 0.01011086}
+`
+{
+'male': 0.9898892, 
+'female': 0.01011086
+}
+`
 
 name: 'Aadarsh'
-{'male': 0.9724812, 'female': 0.02751883}
+`
+{
+'male': 0.9724812, 
+'female': 0.02751883
+}`
 
 name: 'Maadhav'
-{'male': 0.97186756, 'female': 0.02813238}
+`
+{
+'male': 0.97186756, 
+'female': 0.02813238
+}`
 
 name: 'Pabitra'
-{'male': 0.270486, 'female': 0.729514}
+`
+{
+'male': 0.270486, 
+'female': 0.729514
+}`
