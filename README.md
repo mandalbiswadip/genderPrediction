@@ -2,18 +2,40 @@
 Gender prediction from Indian names.
 The trained model tries to predict the gender of the person given the name of the person. The model has been trained only with Indian names for now.
 
+## Using the model:
+
+You need python3.6 and tensorflow 1.8 for running the model.
+
+clone the repo:
+
+`git clone https://github.com/mandalbiswadip/genderPrediction.git`
+`cd genderPrediction`
+
+Create a virtual environment if you like to work in one and install the requirements:
+
+`pip3 install -r requirements.txt`
+
+Put the project path in `scripts.paths.py` in the `HOME` variable. It should look like this:
+
+`HOME = "folder/genderPrediction"`
+
+Finally, get the prediction with prediction probabilities:
+
+```buildoutcfg
+python3 classify.py animesh
+>>Gender for animesh: [{'male': 0.92938721, 'female': 0.070612811}]
+
+```
+
 Model description:
-Charecter level embedding(One hot embeddding) has been used and has been fed to a sequential Recurrent Neural Network(bidirectional).
-Currently the model is tranied for names with maximum 20 charecters.
+Character level embedding(One hot embedding) has been used and has been fed to a sequential Recurrent Neural Network(bidirectional).
+Currently, the model is trained for names with maximum 20 characters.
 
-I am currently trying to train the model for more than 20 charecters. Also, it will be fun to analyze the patters for recurrent neural networks with a focus on understanding these hidden state dynamics
-
-Few of the predicted results are included in the results file. Other analysis will be uploaded as soon as they are done. 
 
 
 Sample Results:
 
-For a given name, probablity of being the gender 'male' or 'female' predicted by the model.
+For a given name, probability of being the gender 'male' or 'female' predicted by the model.
 
 name: 'biswadip'
 {'male': 0.9898892, 'female': 0.01011086}

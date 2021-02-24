@@ -1,10 +1,6 @@
-#include directory paths for the project 
-from collections import defaultdict
+#include directory paths for the project
 
-def getvalue():
-    return 26
-
-HOME = "gender_names"
+HOME = "/home/biswadip/biswadip_temp/repos/open_source/genderPrediction"
 data_path = HOME + '/data'
 model_path = HOME + '/model'
 

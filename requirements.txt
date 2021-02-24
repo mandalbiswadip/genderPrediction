@@ -1,0 +1,6 @@
+pandas==0.24.2
+tensorflow==1.8.0
+xgboost==0.72.1
+numpy==1.13.3
+beautifulsoup4==4.9.3
+scikit_learn==0.24.1

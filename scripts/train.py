@@ -1,17 +1,18 @@
-import pickle
-import re
-import pandas as pd
-import numpy as np
+# train the network and classify
+from __future__ import print_function
+from __future__ import unicode_literals
 
+import re
 from time import time
-from sklearn import svm
-from sklearn.ensemble import RandomForestClassifier
+
+import numpy as np
+import pandas as pd
 import tensorflow as tf
-from xgboost import XGBClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 
-import paths
-from paths import alphabet_dict, class_dict, seq_model_dir_path
+from . import paths
+from .paths import alphabet_dict, class_dict, seq_model_dir_path
+
 dict_model = None
 
 def addseqcolumns(columns = []):
@@ -29,9 +30,6 @@ def remove_non_alphabates(word = '', gender = 'male'):
             return 'dipa'
     else:
         return word
-
-
-
 
 
 class RNN:
@@ -224,27 +222,24 @@ class RNN:
 
 
     def rerun_session(self):
-        with open(paths.loss_file,'w') as file:
-            with tf.Session() as ses:
-                ses.run(tf.global_variables_initializer())
-                # coord = tf.train.Coordinator()
-                # threads = tf.train.start_queue_runners(coord=coord)
-                saver = tf.train.Saver()
-                saver.restore(ses, seq_model_dir_path + "model.ckpt")
+        with tf.Session() as ses:
+            ses.run(tf.global_variables_initializer())
+            # coord = tf.train.Coordinator()
+            # threads = tf.train.start_queue_runners(coord=coord)
+            saver = tf.train.Saver()
+            saver.restore(ses, seq_model_dir_path + "model.ckpt")
 
 
 
-                prediction = ses.run( self.pred, { self.x_rnn: self.test_x })
-                # accur = ses.run(accuracy, {x: train_x, y: train_y})
-                pred_prob = []
-                for row in prediction:
-                    pred_dict = {}
-                    pred_dict['male'] = row[class_dict['male']]
-                    pred_dict['female'] = row[class_dict['female']]
-                    pred_prob.append(pred_dict)
-
-                print("prediction..", pred_prob)
-
+            prediction = ses.run( self.pred, { self.x_rnn: self.test_x })
+            # accur = ses.run(accuracy, {x: train_x, y: train_y})
+            pred_prob = []
+            for row in prediction:
+                pred_dict = {}
+                pred_dict['male'] = row[class_dict['male']]
+                pred_dict['female'] = row[class_dict['female']]
+                pred_prob.append(pred_dict)
+        return pred_prob
 
 
     def train_RNN(self, num_hidden=20, split=0.9):
@@ -298,7 +293,8 @@ def classify(word):
     trainer.input_single_data(word)
     trainer.build_RNN_variables(num_hidden=20)
     trainer.build_RNN_loss()
-    trainer.rerun_session()
+    pred = trainer.rerun_session()
+    return pred
 
 if __name__=='__main__':
     classify('Pabitra')

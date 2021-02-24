@@ -10,7 +10,7 @@ def parse_one():
     """
     name_list = []
 
-    with open("/home/biswadip/Documents/repos/gender_names/data/female.txt",'w') as file:
+    with open("data/female.txt",'w') as file:
         for input_file in sys.argv[1:]:
             print(input_file)
             with open(input_file,'r') as f:
@@ -27,7 +27,7 @@ def parse_one():
 
 def parse_two():
     name_list = []
-    with open("/home/biswadip/Documents/repos/gender_names/data/male_two.txt", 'w') as file:
+    with open("data/male_two.txt", 'w') as file:
         for input_file in sys.argv[1:]:
             print(input_file)
             with open(input_file, 'r') as f:
