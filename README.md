@@ -22,7 +22,7 @@ Put the project path in `scripts.paths.py` in the `HOME` variable. It should loo
 
 Finally, get the prediction with prediction probabilities:
 
-```buildoutcfg
+```python
 python3 classify.py animesh
 >>Gender for animesh: [{'male': 0.92938721, 'female': 0.070612811}]
 
